@@ -1,1 +1,42 @@
-<!DOCTYPE html><html><head><title>LB's Geldrobot</title></head><body><h1>Welkom bij LB's Geldrobot</h1></body></html>
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LB's Geldrobot</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Welkom bij LB's Geldrobot</h1>
+    <nav>
+      <button onclick="switchScreen('financien')">Financiën</button>
+      <button onclick="switchScreen('crypto')">Crypto</button>
+      <button onclick="switchScreen('centen')">Centen Assistent</button>
+    </nav>
+  </header>
+
+  <main id="app">
+    <section id="financien" class="screen active">
+      <h2>Financieel overzicht</h2>
+      <input type="text" placeholder="Inkomsten toevoegen" />
+      <input type="text" placeholder="Uitgaven toevoegen" />
+    </section>
+
+    <section id="crypto" class="screen">
+      <h2>Crypto koersanalyse</h2>
+      <div id="chart-placeholder">[Grafiek hier]</div>
+    </section>
+
+    <section id="centen" class="screen">
+      <h2>Centen Assistent</h2>
+      <div class="chat-window">
+        <div class="bot-msg">Hallo! Waarmee kan ik je helpen?</div>
+        <input type="text" placeholder="Typ een bericht" />
+      </div>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
